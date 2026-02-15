@@ -10,6 +10,7 @@ import SwiftUI
 enum Demo: String, CaseIterable, Identifiable {
     case gooeyCards = "Gooey Card Carousel"
     case spiralList = "3D Spiral List"
+    case retroTV = "Retro TV"
 
     var id: String { rawValue }
 
@@ -19,6 +20,8 @@ enum Demo: String, CaseIterable, Identifiable {
             "Fluid Metal shader distortion with spring physics"
         case .spiralList:
             "Cylindrical scroll with depth blur and pinch-to-expand"
+        case .retroTV:
+            "Pixelated B&W CRT effect on looping video"
         }
     }
 
@@ -26,6 +29,7 @@ enum Demo: String, CaseIterable, Identifiable {
         switch self {
         case .gooeyCards: "rectangle.stack"
         case .spiralList: "circle.hexagongrid"
+        case .retroTV: "tv"
         }
     }
 }
@@ -85,6 +89,8 @@ private struct DemoContainer: View {
                 SwiftyMetal()
             case .spiralList:
                 SpiralListView()
+            case .retroTV:
+                RetroVideoView()
             }
 
             closeButton
