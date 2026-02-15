@@ -1,4 +1,4 @@
-# GooeyContentSwitcher - iOS App
+# SwiftyMetal - iOS App
 
 A modern iOS application using a **workspace + SPM package** architecture for clean separation between app shell and feature code.
 
@@ -30,25 +30,25 @@ These rules files are **starting points** - feel free to:
 ## Project Architecture
 
 ```
-GooeyContentSwitcher/
-├── GooeyContentSwitcher.xcworkspace/              # Open this file in Xcode
-├── GooeyContentSwitcher.xcodeproj/                # App shell project
-├── GooeyContentSwitcher/                          # App target (minimal)
+SwiftyMetal/
+├── SwiftyMetal.xcworkspace/              # Open this file in Xcode
+├── SwiftyMetal.xcodeproj/                # App shell project
+├── SwiftyMetal/                          # App target (minimal)
 │   ├── Assets.xcassets/                # App-level assets (icons, colors)
-│   ├── GooeyContentSwitcherApp.swift              # App entry point
-│   └── GooeyContentSwitcher.xctestplan            # Test configuration
-├── GooeyContentSwitcherPackage/                   # 🚀 Primary development area
+│   ├── SwiftyMetalApp.swift              # App entry point
+│   └── SwiftyMetal.xctestplan            # Test configuration
+├── SwiftyMetalPackage/                   # 🚀 Primary development area
 │   ├── Package.swift                   # Package configuration
-│   ├── Sources/GooeyContentSwitcherFeature/       # Your feature code
-│   └── Tests/GooeyContentSwitcherFeatureTests/    # Unit tests
-└── GooeyContentSwitcherUITests/                   # UI automation tests
+│   ├── Sources/SwiftyMetalFeature/       # Your feature code
+│   └── Tests/SwiftyMetalFeatureTests/    # Unit tests
+└── SwiftyMetalUITests/                   # UI automation tests
 ```
 
 ## Key Architecture Points
 
 ### Workspace + SPM Structure
-- **App Shell**: `GooeyContentSwitcher/` contains minimal app lifecycle code
-- **Feature Code**: `GooeyContentSwitcherPackage/Sources/GooeyContentSwitcherFeature/` is where most development happens
+- **App Shell**: `SwiftyMetal/` contains minimal app lifecycle code
+- **Feature Code**: `SwiftyMetalPackage/Sources/SwiftyMetalFeature/` is where most development happens
 - **Separation**: Business logic lives in the SPM package, app target just imports and displays it
 
 ### Buildable Folders (Xcode 16)
@@ -59,7 +59,7 @@ GooeyContentSwitcher/
 ## Development Notes
 
 ### Code Organization
-Most development happens in `GooeyContentSwitcherPackage/Sources/GooeyContentSwitcherFeature/` - organize your code as you prefer.
+Most development happens in `SwiftyMetalPackage/Sources/SwiftyMetalFeature/` - organize your code as you prefer.
 
 ### Public API Requirements
 Types exposed to the app target need `public` access:
@@ -74,23 +74,23 @@ public struct NewView: View {
 ```
 
 ### Adding Dependencies
-Edit `GooeyContentSwitcherPackage/Package.swift` to add SPM dependencies:
+Edit `SwiftyMetalPackage/Package.swift` to add SPM dependencies:
 ```swift
 dependencies: [
     .package(url: "https://github.com/example/SomePackage", from: "1.0.0")
 ],
 targets: [
     .target(
-        name: "GooeyContentSwitcherFeature",
+        name: "SwiftyMetalFeature",
         dependencies: ["SomePackage"]
     ),
 ]
 ```
 
 ### Test Structure
-- **Unit Tests**: `GooeyContentSwitcherPackage/Tests/GooeyContentSwitcherFeatureTests/` (Swift Testing framework)
-- **UI Tests**: `GooeyContentSwitcherUITests/` (XCUITest framework)
-- **Test Plan**: `GooeyContentSwitcher.xctestplan` coordinates all tests
+- **Unit Tests**: `SwiftyMetalPackage/Tests/SwiftyMetalFeatureTests/` (Swift Testing framework)
+- **UI Tests**: `SwiftyMetalUITests/` (XCUITest framework)
+- **Test Plan**: `SwiftyMetal.xctestplan` coordinates all tests
 
 ## Configuration
 
@@ -103,19 +103,19 @@ Build settings are managed through **XCConfig files** in `Config/`:
 
 ### Entitlements Management
 App capabilities are managed through a **declarative entitlements file**:
-- `Config/GooeyContentSwitcher.entitlements` - All app entitlements and capabilities
+- `Config/SwiftyMetal.entitlements` - All app entitlements and capabilities
 - AI agents can safely edit this XML file to add HealthKit, CloudKit, Push Notifications, etc.
 - No need to modify complex Xcode project files
 
 ### Asset Management
-- **App-Level Assets**: `GooeyContentSwitcher/Assets.xcassets/` (app icon, accent color)
+- **App-Level Assets**: `SwiftyMetal/Assets.xcassets/` (app icon, accent color)
 - **Feature Assets**: Add `Resources/` folder to SPM package if needed
 
 ### SPM Package Resources
 To include assets in your feature package:
 ```swift
 .target(
-    name: "GooeyContentSwitcherFeature",
+    name: "SwiftyMetalFeature",
     dependencies: [],
     resources: [.process("Resources")]
 )

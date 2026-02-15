@@ -1,4 +1,4 @@
-//  GooeyContentSwitcher.swift
+//  SwiftyMetal.swift
 //  Fluid Content Switcher — SwiftUI + Metal
 //
 //  Implements draggable cards with real-time Metal shader distortion,
@@ -16,7 +16,7 @@ struct CardItem: Identifiable, Equatable {
 
 // MARK: - Main View
 
-struct GooeyContentSwitcher: View {
+struct SwiftyMetal: View {
 
     // ── Shader Uniforms (user-controllable) ────
     @State private var angularity: CGFloat = 0.35
@@ -317,5 +317,5 @@ private func clamp(_ value: CGFloat, min minVal: CGFloat, max maxVal: CGFloat) -
 // MARK: - Preview
 
 #Preview {
-    GooeyContentSwitcher()
+    SwiftyMetal()
 }

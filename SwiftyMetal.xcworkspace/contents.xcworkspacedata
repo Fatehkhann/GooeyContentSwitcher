@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GooeyContentSwitcherPackage">
+      location = "group:SwiftyMetalPackage">
    </FileRef>
    <FileRef
-      location = "container:GooeyContentSwitcher.xcodeproj">
+      location = "container:SwiftyMetal.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,10 +1,10 @@
 import SwiftUI
 
 @main
-struct GooeyContentSwitcherApp: App {
+struct SwiftyMetalApp: App {
     var body: some Scene {
         WindowGroup {
-            GooeyContentSwitcher()
+            SpiralListView()
         }
     }
 }

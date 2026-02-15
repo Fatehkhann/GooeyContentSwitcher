@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B41F6442DEDD0D5001A66F9"
-               BuildableName = "GooeyContentSwitcher.app"
-               BlueprintName = "GooeyContentSwitcher"
-               ReferencedContainer = "container:GooeyContentSwitcher.xcodeproj">
+               BuildableName = "SwiftyMetal.app"
+               BlueprintName = "SwiftyMetal"
+               ReferencedContainer = "container:SwiftyMetal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -30,10 +30,10 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:GooeyContentSwitcher.xctestplan">
+            reference = "container:SwiftyMetal.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:GooeyContentSwitcher/GooeyContentSwitcher.xctestplan"
+            reference = "container:SwiftyMetal/SwiftyMetal.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B41F65B2DEDD0D6001A66F9"
-               BuildableName = "GooeyContentSwitcher.xctest"
-               BlueprintName = "GooeyContentSwitcherUITests"
-               ReferencedContainer = "container:GooeyContentSwitcher.xcodeproj">
+               BuildableName = "SwiftyMetal.xctest"
+               BlueprintName = "SwiftyMetalUITests"
+               ReferencedContainer = "container:SwiftyMetal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B41F6442DEDD0D5001A66F9"
-            BuildableName = "GooeyContentSwitcher.app"
-            BlueprintName = "GooeyContentSwitcher"
-            ReferencedContainer = "container:GooeyContentSwitcher.xcodeproj">
+            BuildableName = "SwiftyMetal.app"
+            BlueprintName = "SwiftyMetal"
+            ReferencedContainer = "container:SwiftyMetal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B41F6442DEDD0D5001A66F9"
-            BuildableName = "GooeyContentSwitcher.app"
-            BlueprintName = "GooeyContentSwitcher"
-            ReferencedContainer = "container:GooeyContentSwitcher.xcodeproj">
+            BuildableName = "SwiftyMetal.app"
+            BlueprintName = "SwiftyMetal"
+            ReferencedContainer = "container:SwiftyMetal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
