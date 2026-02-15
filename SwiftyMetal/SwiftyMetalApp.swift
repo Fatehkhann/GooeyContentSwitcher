@@ -4,7 +4,7 @@ import SwiftUI
 struct SwiftyMetalApp: App {
     var body: some Scene {
         WindowGroup {
-            SpiralListView()
+            HomeView()
         }
     }
 }
