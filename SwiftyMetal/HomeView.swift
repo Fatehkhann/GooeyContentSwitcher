@@ -11,6 +11,8 @@ enum Demo: String, CaseIterable, Identifiable {
     case gooeyCards = "Gooey Card Carousel"
     case spiralList = "3D Spiral List"
     case retroTV = "Retro TV"
+    case greenScreen = "Green Screen"
+    case liquidMetalButton = "Liquid Metal Button"
 
     var id: String { rawValue }
 
@@ -22,6 +24,10 @@ enum Demo: String, CaseIterable, Identifiable {
             "Cylindrical scroll with depth blur and pinch-to-expand"
         case .retroTV:
             "Pixelated B&W CRT effect on looping video"
+        case .greenScreen:
+            "Vision framework background removal"
+        case .liquidMetalButton:
+            "Iridescent chrome pill button with Metal shaders"
         }
     }
 
@@ -30,6 +36,8 @@ enum Demo: String, CaseIterable, Identifiable {
         case .gooeyCards: "rectangle.stack"
         case .spiralList: "circle.hexagongrid"
         case .retroTV: "tv"
+        case .greenScreen: "person.and.background.dotted"
+        case .liquidMetalButton: "button.programmable"
         }
     }
 }
@@ -91,6 +99,10 @@ private struct DemoContainer: View {
                 SpiralListView()
             case .retroTV:
                 RetroVideoView()
+            case .greenScreen:
+                LionGreenScreenView()
+            case .liquidMetalButton:
+                LiquidMetalButtonView()
             }
 
             closeButton
