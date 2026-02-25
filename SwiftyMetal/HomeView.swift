@@ -13,6 +13,7 @@ enum Demo: String, CaseIterable, Identifiable {
     case retroTV = "Retro TV"
     case greenScreen = "Green Screen"
     case liquidMetalButton = "Liquid Metal Button"
+    case clothSimulation = "Cloth Simulation"
 
     var id: String { rawValue }
 
@@ -28,6 +29,8 @@ enum Demo: String, CaseIterable, Identifiable {
             "Vision framework background removal"
         case .liquidMetalButton:
             "Iridescent chrome pill button with Metal shaders"
+        case .clothSimulation:
+            "GPU cloth physics with receipt texture mapping"
         }
     }
 
@@ -38,6 +41,7 @@ enum Demo: String, CaseIterable, Identifiable {
         case .retroTV: "tv"
         case .greenScreen: "person.and.background.dotted"
         case .liquidMetalButton: "button.programmable"
+        case .clothSimulation: "rectangle.on.rectangle.angled"
         }
     }
 }
@@ -103,6 +107,8 @@ private struct DemoContainer: View {
                 LionGreenScreenView()
             case .liquidMetalButton:
                 LiquidMetalButtonView()
+            case .clothSimulation:
+                FloatingReceiptView()
             }
 
             closeButton

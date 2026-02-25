@@ -66,3 +66,23 @@ using namespace metal;
 
     return half4(finalColor, color.a);
 }
+
+
+// ──────────────────────────────────────────────
+// MARK: - Black & White Threshold (colorEffect)
+// ──────────────────────────────────────────────
+
+/// Converts each pixel to pure black or white based on luminance.
+/// Chain after retroTV to get a 1-bit dithered look.
+///
+///   cutoff — luminance threshold (0–1). Below → black, above → white.
+///
+[[ stitchable ]] half4 bwThreshold(
+    float2 position,
+    half4  color,
+    float  cutoff
+) {
+    half luma = dot(color.rgb, half3(0.299h, 0.587h, 0.114h));
+    half bw = luma > half(cutoff) ? 1.0h : 0.0h;
+    return half4(bw, bw, bw, color.a);
+}
